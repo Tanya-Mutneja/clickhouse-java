@@ -1,25 +1,43 @@
-<<<<<<< HEAD
-HELP.md
+# MacOS
+.DS_Store
+
+# Java build
+*.class
+*.jar
+*.war
+*.ear
+*.out
+*.bgv
+
+# Gradle
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### STS ###
+# Maven
+target/
+log/
+.antlr/
+
+# STS (Spring Tool Suite)
 .apt_generated
-.classpath
 .factorypath
-.project
-.settings
 .springBeans
 .sts4-cache
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
-### IntelliJ IDEA ###
-.idea
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+
+# IntelliJ
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -27,51 +45,20 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
+# VS Code
 .vscode/
-=======
-# MacOS
-.DS_Store
-
-# Java Files
-*.bgv
-*.class
-*.jar
-*.war
-*.ear
-*.out
-
-# VSCode
 .bloop
 .metals
-.vscode
-.factorypath
 
-# Eclipse
-.classpath
-.project
-.settings/
-
-# Eclipse TestNG plugin
+# TestNG
 test-output/
-
-# Intellij
-.idea/
-*.iml
-*.iws
-out/
-
-# Maven
-.antlr/
-log/
-target/
 
 # Generated files
 .flattened-pom.xml
@@ -83,17 +70,18 @@ dependency-reduced-pom.xml
 **/parser/ClickHouseSqlParserTokenManager.java
 **/parser/Token*.java
 **/parser/ParseException.java
+
+# Benchmark/test output
 java.prof
 jmh-result.*
 profile.html
-
-# Shell scripts
-*.sh
-
-# test configuration
-**/test/resources/test.properties
 performance/jmh-simple-results.json
+
+# Custom test configs
+**/test/resources/test.properties
+
+# File types
+*.sh
 *.csv
 *.sql
 *.json
->>>>>>> 18ed07e0d0784a86b0aac8c878e8da8a2d7a0068
