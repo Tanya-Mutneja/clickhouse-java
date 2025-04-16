@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+    xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.clickhouse</groupId>
+    <artifactId>jdbc-examples</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>JDBC Examples</name>
+    <description>JDBC Examples</description>
+    <url>https://github.com/ClickHouse/clickhouse-java</url>
+    <inceptionYear>2025</inceptionYear>
+
+    <organization>
+        <name>ClickHouse, Inc.</name>
+        <url>https://clickhouse.com/</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/ClickHouse/clickhouse-java</url>
+        <connection>scm:git@github.com:ClickHouse/clickhouse-java.git</connection>
+        <developerConnection>scm:git@github.com:ClickHouse/clickhouse-java.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id>ossrh</id>
+            <name>Sonatype OSSRH</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
+
+    <properties>
+        <project.current.year>2025</project.current.year>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <clickhouse-java.version>0.8.3-SNAPSHOT</clickhouse-java.version>
+        <hikaricp.version>4.0.3</hikaricp.version>
+        <apache-httpclient.version>5.2.1</apache-httpclient.version>
+
+        <compiler-plugin.version>3.8.1</compiler-plugin.version>
+
+        <minJdk>1.8</minJdk>
+        <clickhouse-packages.classifier>all</clickhouse-packages.classifier>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>${hikaricp.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.clickhouse</groupId>
+            <artifactId>clickhouse-jdbc</artifactId>
+            <version>${clickhouse-java.version}</version>
+            <classifier>${clickhouse-packages.classifier}</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.16</version>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${compiler-plugin.version}</version>
+                <configuration>
+                    <source>${minJdk}</source>
+                    <target>${minJdk}</target>
+                    <showWarnings>true</showWarnings>
+                    <compilerArgs>
+                        <arg>-Xlint:all</arg>
+                        <!-- arg>-Werror</arg -->
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

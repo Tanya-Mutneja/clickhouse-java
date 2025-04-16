@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 HELP.md
 .gradle
 build/
@@ -35,3 +36,64 @@ out/
 
 ### VS Code ###
 .vscode/
+=======
+# MacOS
+.DS_Store
+
+# Java Files
+*.bgv
+*.class
+*.jar
+*.war
+*.ear
+*.out
+
+# VSCode
+.bloop
+.metals
+.vscode
+.factorypath
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Eclipse TestNG plugin
+test-output/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+out/
+
+# Maven
+.antlr/
+log/
+target/
+
+# Generated files
+.flattened-pom.xml
+dependency-reduced-pom.xml
+**/parser/javacc/*
+**/parser/*CharStream.java
+**/parser/ClickHouseSqlParser.java
+**/parser/ClickHouseSqlParserConstants.java
+**/parser/ClickHouseSqlParserTokenManager.java
+**/parser/Token*.java
+**/parser/ParseException.java
+java.prof
+jmh-result.*
+profile.html
+
+# Shell scripts
+*.sh
+
+# test configuration
+**/test/resources/test.properties
+performance/jmh-simple-results.json
+*.csv
+*.sql
+*.json
+>>>>>>> 18ed07e0d0784a86b0aac8c878e8da8a2d7a0068
